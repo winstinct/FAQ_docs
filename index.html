@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strike FAQ</title>
+    <link rel="icon" href="./Strike Main Logo.svg" />
+
+    <style>
+       
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+        body {
+            background-color: #004d00; /* Darker green */
+            color: #ffffff; /* White */
+            font-family: 'Montserrat', sans-serif;
+            padding: 20px;
+        }
+
+        .navItems {
+           /* Slightly lighter green */
+            color: #ffffff; /* White */
+            list-style-type: none; /* Optional: To remove bullet points */
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .navItems li {
+            background: #006600;
+            margin: 5px 0;
+            text-decoration: none;
+            padding: 10px;
+            border-radius:8px;
+        }
+
+        .navItems li:hover {
+            color: #00ff00; /* Bright green */
+            font-weight: bold;
+        }
+
+        .navItems li a {
+            text-decoration: none;
+            color: #ffffff; /* White */
+        }
+
+        .heading {
+            font-size: 24px; /* Slightly larger font size */
+            color: #00ff00; /* Bright green */
+        }
+
+        .redirect-text {
+            font-size: 16px; /* Slightly larger font size */
+            color: #ffffff; /* White */
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="heading">StrikexGaming FAQ(<span class="redirect-text">Navigate to specific FAQ by clicking on the below link</span>)</h1>
+    <nav>
+        <ul class="navItems" id="nav-items"></ul>
+        <p id="pItem"></p>
+    </nav>
+
+    <main>
+       
+    </main>
+    
+    <script>
+        const navigationList = [
+            {
+                label: "Create contest in admin",
+                url: "https://scribehow.com/embed/How_to_Create_a_Contest_on_StrikeX_Gaming_Admin_Panel_Website__Uuv3VecjQVG25rgM0vCCHQ?as=scrollable"
+            },
+            {
+
+                label:"How to Create sub-admin",
+                url:"https://scribehow.com/embed/How_To_Create_Sub_Admin__wlgttvW1T-K4eR44q3IDrg?as=scrollable" }
+            
+        ];
+
+        const navItems = document.getElementById("nav-items");
+        const pItem = document.getElementById("pItem");
+
+
+        // Dynamically populate the navigation list
+        navigationList.forEach((item) => {
+            const listItem = document.createElement("li");
+            const link = document.createElement("a");
+
+            // Set link properties
+            link.textContent = item.label;
+            link.href = item.url;
+            link.target = "_blank"; // Open link in a new tab
+            link.style.color = "white"; // Optional: Set link color
+
+            listItem.appendChild(link);
+            navItems.appendChild(listItem);
+        });
+    </script>
+</body>
+</html>
